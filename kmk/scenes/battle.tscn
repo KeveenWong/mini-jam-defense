@@ -1,3 +1,12 @@
-[gd_scene format=3 uid="uid://dq5w0h7b4634j"]
+[gd_scene load_steps=2 format=3 uid="uid://dq5w0h7b4634j"]
+
+[ext_resource type="PackedScene" uid="uid://djmran63jpqjh" path="res://models/enemies/knight.tscn" id="1_kad6m"]
 
 [node name="Battle" type="Node2D"]
+
+[node name="Knight" parent="." instance=ExtResource("1_kad6m")]
+
+[node name="Battle 3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Battle 3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53079, 6.52014)
