@@ -1,12 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://dq5w0h7b4634j"]
+[gd_scene load_steps=3 format=3 uid="uid://dq5w0h7b4634j"]
 
-[ext_resource type="PackedScene" uid="uid://djmran63jpqjh" path="res://models/enemies/knight.tscn" id="1_kad6m"]
+[ext_resource type="PackedScene" uid="uid://djmran63jpqjh" path="res://scenes/enemies/knight.tscn" id="1_kad6m"]
+[ext_resource type="Script" path="res://scenes/battle.gd" id="1_w2k4e"]
 
 [node name="Battle" type="Node2D"]
+script = ExtResource("1_w2k4e")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Knight" parent="." instance=ExtResource("1_kad6m")]
 
 [node name="Battle 3D" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Battle 3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.53079, 6.52014)
+transform = Transform3D(1, 0, 0, 0, 0.952715, 0.303867, 0, -0.303867, 0.952715, 0, 1.53079, 6.52014)
